@@ -203,48 +203,74 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Success Stories Section */}
+      {/* Ivana Foundation Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Success Stories
+              Si i ndihmoni startupet përmes Ivana Foundations?
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Real founders who transformed their ideas into thriving businesses
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll opacity-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll opacity-0">
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
               <img 
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Successful startup team" 
+                src="/f.jpeg" 
+                alt="Ivana Foundation building" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">From Idea to $10M Valuation</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  "Following this guide helped us navigate the complex legal requirements and secure our first round of funding. 
-                  The step-by-step approach made everything manageable."
-                </p>
-                <p className="text-blue-600 font-semibold mt-4">- Sarah Chen, TechFlow CEO</p>
+                <div className="space-y-6 text-slate-700 leading-relaxed">
+                  <p>
+                    Nëpërmjet këtij fondacioni ne ndihmojmë të rinj që kanë ide por nuk dinë nga t'ia nisin.
+                  </p>
+                  
+                  <p>
+                    Organizojmë trajnim praktik, ku i ndihmojmë të strukturojnë idenë dhe të kuptojnë hapat e parë të sipërmarrjes.
+                    Më pas i lidhim me mentorë nga diaspora shqiptare – profesionistë që i udhëzojnë personalisht për disa javë.
+                  </p>
+                  
+                  <p>
+                    Disa prej tyre përfitojnë edhe grante të vogla prej 500 deri në 2000 euro, për të filluar prodhimin, 
+                    për t'u regjistruar si biznes apo për të bërë marketingun fillestar.
+                  </p>
+                  
+                  <p>
+                    Gjithashtu, u japim mundësi të prezantojnë idetë në evente në Tiranë apo New York, ku marrin vëmendje 
+                    nga investitorë, partnerë apo media.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-              <img 
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Business meeting" 
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Secured $2M in Grants</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  "The grants section was invaluable. We secured multiple funding sources and built a sustainable business model 
-                  that's now serving thousands of customers."
-                </p>
-                <p className="text-green-600 font-semibold mt-4">- Marcus Rodriguez, GreenTech Founder</p>
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">Historia e Suksesit</h3>
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <p className="text-slate-600 leading-relaxed mb-4 italic">
+                    "Një nga rastet që më ka mbetur në mendje është një vajzë nga Shkodra që kishte një ide për sapunë natyralë. 
+                    E ndihmuam me mentorim dhe një grant të vogël, dhe sot produktet e saj shiten në disa dyqane dhe online."
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-2xl font-bold text-blue-600">500-2000€</div>
+                  <div className="text-sm text-slate-600">Grante fillestare</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-2xl font-bold text-green-600">Tiranë & NY</div>
+                  <div className="text-sm text-slate-600">Evente prezantimi</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-2xl font-bold text-purple-600">Mentorë</div>
+                  <div className="text-sm text-slate-600">Nga diaspora</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-2xl font-bold text-orange-600">Trajnim</div>
+                  <div className="text-sm text-slate-600">Praktik & udhëzim</div>
+                </div>
               </div>
             </div>
           </div>
