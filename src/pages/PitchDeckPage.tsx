@@ -489,21 +489,24 @@ const PitchDeckPage = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center animate-on-scroll opacity-0">
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-100">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ready to Start Your Founder Journey?</h2>
-            <p className="text-slate-600 mb-8 text-lg">
-              You now have all the essential knowledge to begin your entrepreneurial adventure.
-            </p>
-            <Link
-              to="/"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-purple-600 text-white font-semibold rounded-full hover:from-orange-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 ripple group"
-            >
-              <span>Return to Home</span>
-              <ArrowLeft className="w-5 h-5 ml-2 rotate-180 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-          </div>
-        </div>
+        <div className="text-center animate-on-scroll opacity-0 -mt-10">
+  <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-100">
+    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+      Ready to Start Your Founder Journey?
+    </h2>
+    <p className="text-slate-600 mb-8 text-lg">
+      You now have all the essential knowledge to begin your entrepreneurial adventure.
+    </p>
+    <Link
+      to="/"
+      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-purple-600 text-white font-semibold rounded-full hover:from-orange-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 ripple group"
+    >
+      <span>Return to Home</span>
+      <ArrowLeft className="w-5 h-5 ml-2 rotate-180 transform group-hover:translate-x-1 transition-transform duration-300" />
+    </Link>
+  </div>
+</div>
+
       </div>
     </div>
   );
