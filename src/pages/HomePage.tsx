@@ -306,7 +306,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* Events */}
+              
 {/* Events */}
 <div className="flex justify-start w-full">
   <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg max-w-md">
