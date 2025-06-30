@@ -331,7 +331,6 @@ const HomePage = () => {
 </section>
 </div>
 
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
         {/* Animated background elements */}
