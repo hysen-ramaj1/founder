@@ -307,75 +307,76 @@ const HomePage = () => {
               </div>
 
               
-{/* Events */}
-<div className="flex justify-start w-full">
-  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg max-w-md">
-    <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-      <Calendar className="w-6 h-6 text-purple-600 mr-3" />
-      Disa nga eventet që janë organizuar për startup-e:
-    </h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-      {events.map((event, index) => (
-        <div 
-          key={index}
-          className="flex items-start p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+return (
+  <div>  {/* Kjo div e shtuar */}
+    {/* Events */}
+    <div className="flex justify-start w-full">
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg max-w-md">
+        <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+          <Calendar className="w-6 h-6 text-purple-600 mr-3" />
+          Disa nga eventet që janë organizuar për startup-e:
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {events.map((event, index) => (
+            <div 
+              key={index}
+              className="flex items-start p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span className="text-slate-700 text-sm">{event}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* CTA Section */}
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center relative z-10 animate-on-scroll opacity-0">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+          Ready to Start Your Journey?
+        </h2>
+        <p className="text-xl text-blue-100 mb-8 animate-fade-in-up animate-delay-200">
+          Join thousands of successful founders who started with our comprehensive guides
+        </p>
+        <Link
+          to="/founding-act"
+          className="inline-flex items-center px-10 py-5 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-2 ripple group animate-fade-in-up animate-delay-400"
         >
-          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <span className="text-slate-700 text-sm">{event}</span>
+          <span>Start with Founding Act</span>
+          <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        {/* Animated dots */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"
+              style={{ animationDelay: `${i * 0.3}s` }}
+            ></div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
+    </footer>
+  </div>  {/* Mbyllja e div-it kryesor */}
+);
 
-{/* CTA Section */}
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
-  {/* Animated background elements */}
-  <div className="absolute inset-0">
-    <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
-    <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-  </div>
-
-  <div className="max-w-4xl mx-auto text-center relative z-10 animate-on-scroll opacity-0">
-    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-      Ready to Start Your Journey?
-    </h2>
-    <p className="text-xl text-blue-100 mb-8 animate-fade-in-up animate-delay-200">
-      Join thousands of successful founders who started with our comprehensive guides
-    </p>
-    <Link
-      to="/founding-act"
-      className="inline-flex items-center px-10 py-5 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-2 ripple group animate-fade-in-up animate-delay-400"
-    >
-      <span>Start with Founding Act</span>
-      <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-    </Link>
-  </div>
-</section>
-
-
-      {/* Footer */}
-      <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 relative overflow-hidden">
-        {/* Animated background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          {/* Animated dots */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"
-                style={{ animationDelay: `${i * 0.3}s` }}
-              ></div>
-            ))}
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
 
 export default HomePage;
