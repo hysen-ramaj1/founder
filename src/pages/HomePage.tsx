@@ -246,8 +246,8 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start animate-on-scroll opacity-0">
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
               <img 
-                src="/f.jpeg" 
-                alt="Protik innovation center" 
+                src="/image.png" 
+                alt="Startup ecosystem in Albania" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
@@ -312,7 +312,7 @@ const HomePage = () => {
                   <Calendar className="w-6 h-6 text-purple-600 mr-3" />
                   Disa nga eventet që janë organizuar për startup-e:
                 </h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {events.map((event, index) => (
                     <div 
                       key={index}
