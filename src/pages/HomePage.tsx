@@ -377,6 +377,6 @@ return (
     </footer>
   </div>  {/* Mbyllja e div-it kryesor */}
 );
-
+);
 
 export default HomePage;
