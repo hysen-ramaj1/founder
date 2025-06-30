@@ -376,7 +376,7 @@ const HomePage = () => {
           </div>
         </div>
       </footer>
-    </div>  /* Mbyllja e div-it kryesor */
+    </div>  
   );
 };
 
