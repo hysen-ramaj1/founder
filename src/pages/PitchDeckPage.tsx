@@ -489,7 +489,7 @@ const PitchDeckPage = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center animate-on-scroll opacity-0 -mt-32">
+        <div className="text-center animate-on-scroll opacity-0 -mt-40">
   <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-100">
     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
       Ready to Start Your Founder Journey?
