@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, DollarSign, Scale, Presentation, Users, Trophy, Star, ArrowRight } from 'lucide-react';
+import { FileText, DollarSign, Scale, Presentation, Users, Trophy, Star, ArrowRight, MapPin, Calendar, Award } from 'lucide-react';
 
 const HomePage = () => {
   const heroRef = useRef(null);
@@ -54,6 +54,37 @@ const HomePage = () => {
     { icon: <Users className="w-6 h-6" />, value: '0k+', label: 'Founders Helped' },
     { icon: <Trophy className="w-6 h-6" />, value: '0+', label: 'Successful Startups' },
     { icon: <Star className="w-6 h-6" />, value: '0%', label: 'Success Rate' }
+  ];
+
+  const organizations = [
+    {
+      name: 'Protik',
+      description: 'Qendër inovacioni që ofron trajnime, hackathone, dhe lidhje me rrjete ndërkombëtare.',
+      icon: <Award className="w-6 h-6" />
+    },
+    {
+      name: 'Coolab',
+      description: 'Hapësirë bashkëpunimi për zhvillues, krijues dhe sipërmarrës të rinj.',
+      icon: <Users className="w-6 h-6" />
+    },
+    {
+      name: 'Yunus Social Business',
+      description: 'Fokus në startup-e sociale që sjellin ndikim në komunitet.',
+      icon: <Trophy className="w-6 h-6" />
+    },
+    {
+      name: 'Ivana Foundations',
+      description: 'Jep mentorim dhe grante të vogla për ide biznesi me ndikim social, veçanërisht për gra dhe të rinj nga qytete të vogla.',
+      icon: <Star className="w-6 h-6" />
+    }
+  ];
+
+  const events = [
+    'Startup Weekend Tirana – Gara 3-ditore për ndërtimin e një ideje në ekip',
+    'Women Founders Meetup – Takime për gra sipërmarrëse',
+    'Protik Demo Day – Prezantim i ideve përpara jurisë dhe investitorëve',
+    'Hack4Tourism – Hackathon për zgjidhje inovative në turizëm',
+    'EU for Innovation Bootcamps – Trajnime intensive për të rinjtë që duan të krijojnë startup-e'
   ];
 
   useEffect(() => {
@@ -203,73 +234,94 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Ivana Foundation Section */}
+      {/* Startup Support in Albania Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Si i ndihmoni startupet përmes Ivana Foundations?
+              Startupet dhe mbështetja në Shqipëri
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll opacity-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start animate-on-scroll opacity-0">
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
               <img 
                 src="/f.jpeg" 
-                alt="Ivana Foundation building" 
+                alt="Protik innovation center" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
                 <div className="space-y-6 text-slate-700 leading-relaxed">
                   <p>
-                    Nëpërmjet këtij fondacioni ne ndihmojmë të rinj që kanë ide por nuk dinë nga t'ia nisin.
+                    Ekosistemi i startup-eve në Shqipëri është në zhvillim të vazhdueshëm, me gjithnjë e më shumë hapësira që ofrojnë mbështetje për të rinjtë me ide inovative. Në qendër të kësaj lëvizjeje ndodhet Protik, një hapësirë moderne në Tiranë që ofron trajnime, mentorim, aktivitete dhe lidhje me investitorë e partnerë ndërkombëtarë.
                   </p>
                   
                   <p>
-                    Organizojmë trajnim praktik, ku i ndihmojmë të strukturojnë idenë dhe të kuptojnë hapat e parë të sipërmarrjes.
-                    Më pas i lidhim me mentorë nga diaspora shqiptare – profesionistë që i udhëzojnë personalisht për disa javë.
+                    Protik ka organizuar dhjetëra evente dhe gara për startup-e, duke krijuar një komunitet aktiv dhe bashkëpunues.
                   </p>
                   
                   <p>
-                    Disa prej tyre përfitojnë edhe grante të vogla prej 500 deri në 2000 euro, për të filluar prodhimin, 
-                    për t'u regjistruar si biznes apo për të bërë marketingun fillestar.
-                  </p>
-                  
-                  <p>
-                    Gjithashtu, u japim mundësi të prezantojnë idetë në evente në Tiranë apo New York, ku marrin vëmendje 
-                    nga investitorë, partnerë apo media.
+                    Përveç Protik, ekzistojnë edhe disa organizata të tjera që ndihmojnë startup-et në forma të ndryshme.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Historia e Suksesit</h3>
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
-                  <p className="text-slate-600 leading-relaxed mb-4 italic">
-                    "Një nga rastet që më ka mbetur në mendje është një vajzë nga Shkodra që kishte një ide për sapunë natyralë. 
-                    E ndihmuam me mentorim dhe një grant të vogël, dhe sot produktet e saj shiten në disa dyqane dhe online."
-                  </p>
+            <div className="space-y-8">
+              {/* Organizations */}
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                  <MapPin className="w-6 h-6 text-blue-600 mr-3" />
+                  Organizata që mbështesin startup-et në Shqipëri:
+                </h3>
+                <div className="space-y-4">
+                  {organizations.map((org, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                      <div className="flex items-start">
+                        <div className="text-blue-600 mr-3 mt-1">{org.icon}</div>
+                        <div>
+                          <h4 className="font-bold text-slate-900 mb-1">{org.name}</h4>
+                          <p className="text-sm text-slate-600">{org.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl font-bold text-blue-600">500-2000€</div>
-                  <div className="text-sm text-slate-600">Grante fillestare</div>
+
+              {/* Interview */}
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                  <Users className="w-6 h-6 text-green-600 mr-3" />
+                  Intervistë e shkurtër: Si është të nisesh një startup në Shqipëri?
+                </h3>
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <p className="text-slate-600 leading-relaxed mb-4 italic">
+                    "Në fillim kisha vetëm një ide për një aplikacion që ndihmon studentët të organizojnë mësimet. Falë një trajnimi që mora në Tiranë, mësova si të ndërtoj një plan biznesi dhe të prezantoj idenë time. Më pas u përzgjodha për një program mentorimi dhe mora edhe një ndihmë financiare të vogël për të nisur zhvillimin."
+                  </p>
+                  <p className="text-green-600 font-semibold">- Arian, 23 vjeç – pjesëmarrës në një trajnim startup-i</p>
                 </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl font-bold text-green-600">Tiranë & NY</div>
-                  <div className="text-sm text-slate-600">Evente prezantimi</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl font-bold text-purple-600">Mentorë</div>
-                  <div className="text-sm text-slate-600">Nga diaspora</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl font-bold text-orange-600">Trajnim</div>
-                  <div className="text-sm text-slate-600">Praktik & udhëzim</div>
+              </div>
+
+              {/* Events */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                  <Calendar className="w-6 h-6 text-purple-600 mr-3" />
+                  Disa nga eventet që janë organizuar për startup-e:
+                </h3>
+                <div className="space-y-3">
+                  {events.map((event, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-start p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                    >
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-slate-700 text-sm">{event}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
