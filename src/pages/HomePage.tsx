@@ -330,6 +330,7 @@ const HomePage = () => {
 
 
         </div>
+        </div>
       </section>
 
       {/* CTA Section */}
