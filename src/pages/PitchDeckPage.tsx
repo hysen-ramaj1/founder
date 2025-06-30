@@ -464,7 +464,7 @@ const PitchDeckPage = () => {
           </div>
         </div>
         <a
-  href="/dokument.pdf"
+  href="/Startup.pdf"
   download
   className="flex justify-center mx-auto mt-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 ripple group max-w-max"
 >
