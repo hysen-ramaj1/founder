@@ -328,33 +328,31 @@ const HomePage = () => {
   </div>
 </div>
 
+{/* CTA Section */}
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
+  {/* Animated background elements */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
+    <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+  </div>
+
+  <div className="max-w-4xl mx-auto text-center relative z-10 animate-on-scroll opacity-0">
+    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+      Ready to Start Your Journey?
+    </h2>
+    <p className="text-xl text-blue-100 mb-8 animate-fade-in-up animate-delay-200">
+      Join thousands of successful founders who started with our comprehensive guides
+    </p>
+    <Link
+      to="/founding-act"
+      className="inline-flex items-center px-10 py-5 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-2 ripple group animate-fade-in-up animate-delay-400"
+    >
+      <span>Start with Founding Act</span>
+      <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+    </Link>
+  </div>
 </section>
-</div>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10 animate-on-scroll opacity-0">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-            Ready to Start Your Journey?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 animate-fade-in-up animate-delay-200">
-            Join thousands of successful founders who started with our comprehensive guides
-          </p>
-          <Link
-            to="/founding-act"
-            className="inline-flex items-center px-10 py-5 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-2 ripple group animate-fade-in-up animate-delay-400"
-          >
-            <span>Start with Founding Act</span>
-            <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-          </Link>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 relative overflow-hidden">
