@@ -307,25 +307,26 @@ const HomePage = () => {
               </div>
 
               {/* Events */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-                  <Calendar className="w-6 h-6 text-purple-600 mr-3" />
-                  Disa nga eventet që janë organizuar për startup-e:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {events.map((event, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-start p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-                    >
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-slate-700 text-sm">{event}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+<div className="flex justify-start w-full">
+  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg max-w-md">
+    <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+      <Calendar className="w-6 h-6 text-purple-600 mr-3" />
+      Disa nga eventet që janë organizuar për startup-e:
+    </h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {events.map((event, index) => (
+        <div 
+          key={index}
+          className="flex items-start p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+        >
+          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+          <span className="text-slate-700 text-sm">{event}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
 
