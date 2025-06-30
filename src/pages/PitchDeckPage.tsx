@@ -463,17 +463,14 @@ const PitchDeckPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center min-h-screen">
-  <a
-    href="/Startup.pdf"
-    download
-    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-purple-600 text-white font-semibold rounded-full hover:from-orange-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 ripple group"
-  >
-    <span>Pitch Deck Example</span>
-    <ArrowLeft className="w-5 h-5 ml-2 rotate-180 transform group-hover:translate-x-1 transition-transform duration-300" />
-  </a>
-</div>
-
+        <a
+  href="/Startup.pptx"
+  download
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-purple-600 text-white font-semibold rounded-full hover:from-orange-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 ripple group"
+>
+  <span>Pitch Deck Example</span>
+  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 transform group-hover:translate-x-1 transition-transform duration-300" />
+</a>
 
         {/* Success Story */}
         <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600 animate-gradient p-8 rounded-2xl text-white mb-8 shadow-2xl hover:shadow-3xl transition-all duration-300 animate-on-scroll opacity-0">
