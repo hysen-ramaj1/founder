@@ -306,8 +306,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              
-{/* Events */}
+              {/* Events */}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
                   <Calendar className="w-6 h-6 text-purple-600 mr-3" />
@@ -327,6 +326,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient relative overflow-hidden">
@@ -373,7 +374,7 @@ const HomePage = () => {
           </div>
         </div>
       </footer>
-    </div>  
+    </div>
   );
 };
 
