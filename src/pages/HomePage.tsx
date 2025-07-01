@@ -244,29 +244,47 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start animate-on-scroll opacity-0">
-            <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-              <img 
-                src="/image.png" 
-                alt="Startup ecosystem in Albania" 
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <div className="space-y-6 text-slate-700 leading-relaxed">
-                  <p>
-                    Ekosistemi i startup-eve në Shqipëri është në zhvillim të vazhdueshëm, me gjithnjë e më shumë hapësira që ofrojnë mbështetje për të rinjtë me ide inovative. Në qendër të kësaj lëvizjeje ndodhet Protik, një hapësirë moderne në Tiranë që ofron trajnime, mentorim, aktivitete dhe lidhje me investitorë e partnerë ndërkombëtarë.
+            {/* Left Column - Main Content and Interview */}
+            <div className="space-y-8">
+              <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img 
+                  src="/image.png" 
+                  alt="Startup ecosystem in Albania" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-8">
+                  <div className="space-y-6 text-slate-700 leading-relaxed">
+                    <p>
+                      Ekosistemi i startup-eve në Shqipëri është në zhvillim të vazhdueshëm, me gjithnjë e më shumë hapësira që ofrojnë mbështetje për të rinjtë me ide inovative. Në qendër të kësaj lëvizjeje ndodhet Protik, një hapësirë moderne në Tiranë që ofron trajnime, mentorim, aktivitete dhe lidhje me investitorë e partnerë ndërkombëtarë.
+                    </p>
+                    
+                    <p>
+                      Protik ka organizuar dhjetëra evente dhe gara për startup-e, duke krijuar një komunitet aktiv dhe bashkëpunues.
+                    </p>
+                    
+                    <p>
+                      Përveç Protik, ekzistojnë edhe disa organizata të tjera që ndihmojnë startup-et në forma të ndryshme.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Interview */}
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                  <Users className="w-6 h-6 text-green-600 mr-3" />
+                  Intervistë e shkurtër: Si është të nisesh një startup në Shqipëri?
+                </h3>
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <p className="text-slate-600 leading-relaxed mb-4 italic">
+                    "Në fillim kisha vetëm një ide për një aplikacion që ndihmon studentët të organizojnë mësimet. Falë një trajnimi që mora në Tiranë, mësova si të ndërtoj një plan biznesi dhe të prezantoj idenë time. Më pas u përzgjodha për një program mentorimi dhe mora edhe një ndihmë financiare të vogël për të nisur zhvillimin."
                   </p>
-                  
-                  <p>
-                    Protik ka organizuar dhjetëra evente dhe gara për startup-e, duke krijuar një komunitet aktiv dhe bashkëpunues.
-                  </p>
-                  
-                  <p>
-                    Përveç Protik, ekzistojnë edhe disa organizata të tjera që ndihmojnë startup-et në forma të ndryshme.
-                  </p>
+                  <p className="text-green-600 font-semibold">- Arian, 23 vjeç – pjesëmarrës në një trajnim startup-i</p>
                 </div>
               </div>
             </div>
 
+            {/* Right Column - Organizations and Events */}
             <div className="space-y-8">
               {/* Organizations */}
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg">
@@ -292,27 +310,13 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* Interview */}
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-                  <Users className="w-6 h-6 text-green-600 mr-3" />
-                  Intervistë e shkurtër: Si është të nisesh një startup në Shqipëri?
-                </h3>
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
-                  <p className="text-slate-600 leading-relaxed mb-4 italic">
-                    "Në fillim kisha vetëm një ide për një aplikacion që ndihmon studentët të organizojnë mësimet. Falë një trajnimi që mora në Tiranë, mësova si të ndërtoj një plan biznesi dhe të prezantoj idenë time. Më pas u përzgjodha për një program mentorimi dhe mora edhe një ndihmë financiare të vogël për të nisur zhvillimin."
-                  </p>
-                  <p className="text-green-600 font-semibold">- Arian, 23 vjeç – pjesëmarrës në një trajnim startup-i</p>
-                </div>
-              </div>
-
               {/* Events */}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
                   <Calendar className="w-6 h-6 text-purple-600 mr-3" />
                   Disa nga eventet që janë organizuar për startup-e:
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="space-y-3">
                   {events.map((event, index) => (
                     <div 
                       key={index}
